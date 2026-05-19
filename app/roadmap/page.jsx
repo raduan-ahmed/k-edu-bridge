@@ -396,6 +396,109 @@ export default function RoadmapPage() {
               </div>
             </div>
           ))}
+
+                  {/* FLOWCHART */}
+        <div style={{
+          background: '#fff', borderRadius: '20px',
+          border: '1px solid rgba(0,0,0,0.08)',
+          padding: '2rem', marginBottom: '2rem',
+          boxShadow: '0 2px 16px rgba(0,0,0,0.07)'
+        }}>
+          <p style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#C0392B', marginBottom: '8px' }}>Quick Overview</p>
+          <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '1.8rem', color: '#0e0e0e', marginBottom: '0.5rem' }}>Roadmap at a Glance</h2>
+          <p style={{ fontSize: '0.9rem', color: '#6b6b6b', marginBottom: '1.5rem' }}>Your complete journey from learning Korean to starting university life in Korea.</p>
+
+          <svg width="100%" viewBox="0 0 680 920" role="img">
+            <title>Korea Study Roadmap Flowchart</title>
+            <desc>Step-by-step flowchart showing the journey from learning Korean to starting university life in Korea</desc>
+            <defs>
+              <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </marker>
+            </defs>
+
+            {/* Step 1 */}
+            <rect x="210" y="20" width="260" height="56" rx="10" fill="rgba(29,158,117,0.12)" stroke="#0F6E56" strokeWidth="1"/>
+            <text x="340" y="44" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#085041'}}>🗣️ Learn Korean</text>
+            <text x="340" y="62" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#0F6E56'}}>TOPIK I target · 3–6 months</text>
+            <line x1="340" y1="76" x2="340" y2="108" stroke="#0F6E56" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 2 */}
+            <rect x="210" y="110" width="260" height="56" rx="10" fill="rgba(24,95,165,0.1)" stroke="#185FA5" strokeWidth="1"/>
+            <text x="340" y="134" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#0C447C'}}>📄 Prepare Documents</text>
+            <text x="340" y="152" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#185FA5'}}>SOP · LOR · Transcripts · Passport</text>
+            <line x1="340" y1="166" x2="340" y2="198" stroke="#185FA5" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 3 */}
+            <rect x="210" y="200" width="260" height="56" rx="10" fill="rgba(83,74,183,0.1)" stroke="#534AB7" strokeWidth="1"/>
+            <text x="340" y="224" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#3C3489'}}>🏛️ Select University</text>
+            <text x="340" y="242" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#534AB7'}}>Research · Contact professors</text>
+            <line x1="340" y1="256" x2="340" y2="288" stroke="#534AB7" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 4 */}
+            <rect x="210" y="290" width="260" height="56" rx="10" fill="rgba(153,60,29,0.1)" stroke="#993C1D" strokeWidth="1"/>
+            <text x="340" y="314" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#712B13'}}>🏆 Apply for GKS</text>
+            <text x="340" y="332" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#993C1D'}}>March deadline · Embassy Track</text>
+            <line x1="340" y1="346" x2="340" y2="378" stroke="#993C1D" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 5 */}
+            <rect x="210" y="380" width="260" height="56" rx="10" fill="rgba(133,79,11,0.1)" stroke="#854F0B" strokeWidth="1"/>
+            <text x="340" y="404" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#633806'}}>🎤 Pass Interview</text>
+            <text x="340" y="422" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#854F0B'}}>Embassy interview · April–May</text>
+            <line x1="340" y1="436" x2="340" y2="468" stroke="#854F0B" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Success branch */}
+            <rect x="100" y="470" width="160" height="50" rx="10" fill="rgba(59,109,17,0.1)" stroke="#3B6D11" strokeWidth="1"/>
+            <text x="180" y="492" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#27500A'}}>✅ Selected!</text>
+            <text x="180" y="508" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#3B6D11'}}>Results in June</text>
+
+            {/* Backup branch */}
+            <rect x="420" y="470" width="160" height="50" rx="10" fill="rgba(95,94,90,0.1)" stroke="#5F5E5A" strokeWidth="1"/>
+            <text x="500" y="492" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#444441'}}>⚡ Not selected</text>
+            <text x="500" y="508" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#5F5E5A'}}>Apply to universities</text>
+
+            {/* Branch arrows */}
+            <path d="M340 470 L182 470" fill="none" stroke="#3B6D11" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+            <path d="M340 470 L418 470" fill="none" stroke="#5F5E5A" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+            <text x="255" y="462" textAnchor="middle" style={{fontSize:'11px', fill:'#3B6D11'}}>Pass</text>
+            <text x="425" y="462" textAnchor="middle" style={{fontSize:'11px', fill:'#5F5E5A'}}>Backup</text>
+
+            {/* Rejoin arrows */}
+            <path d="M500 520 L500 570 L472 570" fill="none" stroke="#5F5E5A" strokeWidth="1" strokeDasharray="4 3" markerEnd="url(#arrow2)"/>
+            <path d="M180 520 L180 570 L208 570" fill="none" stroke="#3B6D11" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 6 */}
+            <rect x="210" y="570" width="260" height="56" rx="10" fill="rgba(24,95,165,0.1)" stroke="#185FA5" strokeWidth="1"/>
+            <text x="340" y="594" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#0C447C'}}>🛂 Visa Process</text>
+            <text x="340" y="612" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#185FA5'}}>D-2 student visa · 1–2 months</text>
+            <line x1="340" y1="626" x2="340" y2="658" stroke="#185FA5" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 7 */}
+            <rect x="210" y="660" width="260" height="56" rx="10" fill="rgba(29,158,117,0.12)" stroke="#0F6E56" strokeWidth="1"/>
+            <text x="340" y="684" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#085041'}}>✈️ Pre-departure Prep</text>
+            <text x="340" y="702" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#0F6E56'}}>Flight · Currency · SIM · Packing</text>
+            <line x1="340" y1="716" x2="340" y2="748" stroke="#0F6E56" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 8 */}
+            <rect x="210" y="750" width="260" height="56" rx="10" fill="rgba(83,74,183,0.1)" stroke="#534AB7" strokeWidth="1"/>
+            <text x="340" y="774" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:600, fill:'#3C3489'}}>🗣️ Language Training</text>
+            <text x="340" y="792" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#534AB7'}}>1 year Korean · GKS scholars</text>
+            <line x1="340" y1="806" x2="340" y2="838" stroke="#534AB7" strokeWidth="1.5" markerEnd="url(#arrow2)"/>
+
+            {/* Step 9 */}
+            <rect x="210" y="840" width="260" height="56" rx="10" fill="rgba(153,60,29,0.12)" stroke="#993C1D" strokeWidth="1.5"/>
+            <text x="340" y="864" textAnchor="middle" dominantBaseline="central" style={{fontSize:'14px', fontWeight:700, fill:'#712B13'}}>🇰🇷 Life in Korea!</text>
+            <text x="340" y="882" textAnchor="middle" dominantBaseline="central" style={{fontSize:'12px', fill:'#993C1D'}}>University begins · New journey</text>
+
+            {/* Step numbers */}
+            {[20,110,200,290,380,570,660,750,840].map((y, i) => (
+              <text key={i} x="48" y={y+28} textAnchor="middle" style={{fontSize:'11px', fontWeight:600, fill:'#aaa'}}>
+                {`0${i+1 > 5 ? i+1 : i+1}`}
+              </text>
+            ))}
+          </svg>
+        </div>
+
         </div>
 
         {/* Completion message */}
